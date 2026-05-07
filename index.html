@@ -12,7 +12,7 @@
       color: white; padding: 60px 20px; text-align: center;
     }
     header h1 { font-size: 2rem; margin-bottom: 12px; }
-    header p { font-size: 1.1rem; opacity: 0.85; max-width: 520px; margin: 0 auto; }
+    header p { font-size: 1.1rem; opacity: 0.85; max-width: 560px; margin: 0 auto; }
     .badge {
       display: inline-block; margin-top: 24px;
       background: white; color: #6d28d9;
@@ -29,11 +29,12 @@
     .policy-bar a:hover { text-decoration: underline; }
     section { max-width: 760px; margin: 0 auto; padding: 48px 20px; }
     h2 { font-size: 1.4rem; color: #4c1d95; margin-bottom: 16px; }
+    p { color: #444; line-height: 1.8; margin-bottom: 16px; }
     ul { padding-left: 20px; line-height: 2; color: #444; }
     .features { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 16px; }
     .feature { background: #f5f3ff; border-radius: 8px; padding: 20px; }
     .feature h3 { color: #6d28d9; margin-bottom: 8px; font-size: 1rem; }
-    .feature p { color: #555; font-size: 0.9rem; line-height: 1.6; }
+    .feature p { color: #555; font-size: 0.9rem; line-height: 1.6; margin-bottom: 0; }
     footer {
       background: #f5f5f5; text-align: center;
       padding: 24px 20px; font-size: 0.85rem; color: #888;
@@ -47,7 +48,7 @@
 
 <header>
   <h1>Simple Inventory Planner</h1>
-  <p>Smart stock replenishment analysis — right inside Google Sheets.</p>
+  <p>Smart stock replenishment analysis that works with your existing Google Sheets — no reformatting required.</p>
   <a class="badge" href="https://workspace.google.com/marketplace" target="_blank">Available on Google Workspace Marketplace</a>
 </header>
 
@@ -57,28 +58,37 @@
 
 <section>
   <h2>What it does</h2>
-  <p style="color:#444;line-height:1.8;margin-bottom:32px;">
+  <p>
     Simple Inventory Planner is a Google Sheets add-on that helps e-commerce sellers and inventory managers
     calculate reorder quantities, set safety stock levels, and receive automated email alerts before stockouts happen.
+    Point it to your existing Sales, SOH, and Aging sheets — no reformatting needed.
   </p>
 
   <h2>Features</h2>
   <div class="features">
     <div class="feature">
+      <h3>Works With Your Existing Sheets</h3>
+      <p>Point to any sheet in your spreadsheet for Sales, Stock on Hand, and Aging data. Select which columns contain SKU, quantity, and aging days — no fixed format required.</p>
+    </div>
+    <div class="feature">
       <h3>Replenishment Planning</h3>
-      <p>Calculate how much stock to reorder based on sales velocity and lead time.</p>
+      <p>Automatically calculates Reorder Point, Safety Stock, Coverage Days, and Suggested Reorder Quantity for every SKU based on sales velocity and lead time.</p>
     </div>
     <div class="feature">
-      <h3>Safety Stock Alerts</h3>
-      <p>Get email notifications when inventory drops below your defined thresholds.</p>
+      <h3>SKU Filter</h3>
+      <p>Filter analysis by brand, category, or any column value — or supply a custom SKU list from another sheet. Analyse only the products you need.</p>
     </div>
     <div class="feature">
-      <h3>Scheduled Reports</h3>
-      <p>Set up daily or weekly automated checks so you never miss a low-stock situation.</p>
+      <h3>Per-Category Settings</h3>
+      <p>Set different lead times, safety stock days, and coverage targets for different product categories or brands. One tool handles your entire portfolio.</p>
     </div>
     <div class="feature">
-      <h3>Works in Google Sheets</h3>
-      <p>No new tools to learn — works inside the spreadsheet you already use every day.</p>
+      <h3>Aging Stock Detection</h3>
+      <p>Link to your aging report to automatically flag slow-moving and aged inventory. STATUS shows OOS, Reorder, Aging, Overstock, Low Stock, or Normal.</p>
+    </div>
+    <div class="feature">
+      <h3>Email Alerts &amp; Scheduled Reports</h3>
+      <p>Receive automated email notifications when inventory drops below your thresholds. Set up daily or weekly scheduled checks so you never miss a stockout.</p>
     </div>
   </div>
 </section>
@@ -86,17 +96,17 @@
 <section style="padding-top:0;">
   <h2>Permissions used</h2>
   <ul>
-    <li><strong>Google Sheets (current only)</strong> — read and write data in the active spreadsheet</li>
-    <li><strong>Script Storage</strong> — save your settings and preferences</li>
-    <li><strong>UI</strong> — display the sidebar panel inside Sheets</li>
-    <li><strong>Email (Send Mail)</strong> — send you low-stock alert emails</li>
-    <li><strong>Triggers (ScriptApp)</strong> — schedule automated checks on your behalf</li>
+    <li><strong>Google Sheets (current spreadsheet only)</strong> — read and write data in the active spreadsheet to perform inventory analysis</li>
+    <li><strong>Script Storage</strong> — save your settings and column mapping preferences</li>
+    <li><strong>UI</strong> — display the settings sidebar panel inside Sheets</li>
+    <li><strong>Email (Send Mail)</strong> — send you low-stock alert emails when inventory falls below thresholds</li>
+    <li><strong>Triggers (ScriptApp)</strong> — schedule automated inventory checks on your behalf</li>
   </ul>
 </section>
 
 <section style="padding-top:0;">
   <h2>Developer</h2>
-  <p style="color:#444;line-height:1.8;">
+  <p>
     Developed by Teoh Jia Jia.<br>
     Contact: <a href="mailto:jiajiateoh107@gmail.com">jiajiateoh107@gmail.com</a>
   </p>
